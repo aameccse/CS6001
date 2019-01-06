@@ -1,0 +1,196 @@
+<html lang="en">
+<head>
+<title>AAMEC</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+*{
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+    background-color:BROWN;
+    PADDING:10PX;
+    text-align: center;
+    font-size: 35px;
+    -webkit-text-stroke: 1px red;
+    color: yellow;
+   text-shadow:
+       3px 3px 0 #000,
+     -1px -1px 0 #000,  
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
+   
+}
+
+#grad1{
+    height: 200px;
+    background-image:url(a.jpg);
+   -webkit-text-stroke: 1px RED;
+   color: YELLOW;
+   text-shadow:
+       3px 3px 0 #000,
+     -1px -1px 0 #000,  
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
+   }
+   #grad2{display:inline-table;
+   float:right;
+   -webkit-text-stroke: .5px RED;
+    color: YELLOW;
+      text-shadow:
+       3px 3px 0 #000,
+     -1px -1px 0 #000,  
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
+   }
+   .btn {float:left;
+  background-color: brown;
+  border: border-box;
+  color: white;
+  padding: 1px 35px;
+  text-align: center;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: green;
+  color: black;
+}
+
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+    float: left;
+    width: 30%;
+    height: 300px; /* only for demonstration, should be removed */
+    background: #ccc;
+    padding: 20px;
+}
+aside{
+    float: right;
+    width: 30%;
+    height: 300px; /* only for demonstration, should be removed */
+    background: #ccc;
+    PADDING:20PX;
+}
+
+
+/* Style the list inside the menu */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+article {
+   display:inline-table;
+    width: 40%;
+    background-color: #f1f1f1;
+    height: 300px; /* only for demonstration, should be removed */
+}
+
+/* Clear floats after the columns */
+section:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Style the footer */
+footer {
+    background-color: #777;
+    padding: 35px;
+    }
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+    nav, article,aside {
+        width: 100%;
+        height: auto;
+    }
+}
+</style>
+<body>
+<div id="grad1">
+ <h2><center><br><br><br><br>ANJALAI AMMAL MAHALINGAM ENGINEERING COLLEGE<br> DEPARTMENT OF COMPUTER SCIENCE </h2>
+</div>
+<header>
+  <h4>CS6001 - C# AND .NET PROGRAMMING</h4>
+</header>
+<section>
+  <nav>
+      <div style="text-align:center"><B><U>NOTES HERE</U></B><br><br><br><br><br><a href="#">UNIT 1</a><br>
+      <a href="#">UNIT 2</a><BR><a href="#">UNIT 3</a><br><a href="#">UNIT 4</a><br><a href="#">UNIT 5</a><br></div>
+      
+  </nav>
+  
+  <article>
+   <div style="text-align:center;"><BR><B><U>QUESTIONS PAPER HERE</U></B><marquee  behavior="scroll" direction="up" hspace=135 vspace=10% width="100%"  Scrolldelay=150 onmouseover="this.stop();" onmouseout="this.start();" ><br><br><br><br><br>UPDATE SOON...</marquee></div>
+      
+  </article>
+  <aside>
+  <div style="text-align:center"><U><B>PPT  HERE</B></U><br><br><br><br><br>UPDATE SOON ...</div>
+   
+  </aside>
+ 
+</section>
+
+<footer>
+<button  class="btn" onclick="myFunction()" >ABOUT</button><div id="grad2"><p id="myDIV"> </p>
+  </div>
+</footer>
+<script>
+function myFunction() {
+    var x = document.getElementById("myDIV");
+    if (x.innerHTML === "DEVELOPED BY DEPARTMENT OF CSE") {
+        x.innerHTML = "PREPAREAD BY Mr.R.ROGERSAMSON";
+    } else {
+        x.innerHTML = "DEVELOPED BY DEPARTMENT OF CSE";
+    }
+}
+
+<!--
+var nHist = window.history.length;
+if(window.history[nHist] != window.location)
+  window.history.forward();
+//-->
+var message="Function Disabled!";
+
+function clickIE4(){
+if (event.button==2){
+alert(message);
+return false;
+ }
+}
+
+function clickNS4(e){
+if (document.layers||document.getElementById&&!document.all){
+if (e.which==2||e.which==3){
+alert(message);
+return false;
+}
+}
+}
+
+if (document.layers){
+document.captureEvents(Event.MOUSEDOWN);
+document.onmousedown=clickNS4;
+}
+else if (document.all&&!document.getElementById){
+document.onmousedown=clickIE4;
+}
+
+document.oncontextmenu=new Function("alert(message);return false")
+
+</script>
+</body>
+</html>
